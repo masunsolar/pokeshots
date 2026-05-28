@@ -26,7 +26,6 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .background::before {
@@ -41,173 +40,40 @@ body {
     z-index: -1;
 }
 /*---------------------------*/
-/*POKEDEX*/
 
-/*Pokédex - Imagem da Pokedex*/
-.pokedex {
-	position: relative;
+.pesquisa{
     margin-top: 5%;
-    width: 80vw;
-    max-width: 1479px;
-    aspect-ratio: 1479 / 775;
-    background-image: url('../images/pokedex/pokedex.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-/*Botão Home da Pokédex*/
-.botaohome {
-	position: absolute;
-    top: 7.9%;
-    left: 6.35%;
-    width: 5.2%;
-    aspect-ratio: 1 / 1;
-    background: #15d1d1;
-    border-radius: 50%;
-	box-shadow: 0 2px 0 #013b3b;
-	transition: all 0.1s ease-in-out;
-	cursor: pointer;
-    align-content: center;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.botaohome:active {
-	transform: translateY(6px); 
-	box-shadow: 0 0px 0 #013b3b; 
-}
-
-.botaohomelink {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    background: transparent;
-}
-
-/*Botão Jogo 1 da Pokédex*/
-.botaojogo1 {
-	position: absolute;
-    top: 7%;
-    left: 14%;
-    width: 2%;
-    aspect-ratio: 1 / 1;
-    background: #e42839;
-    border-radius: 50%;
-	box-shadow: 0 2px 0 #5e0505;
-	transition: all 0.1s ease-in-out;
-	cursor: pointer;
-}
-
-.botaojogo1:active {
-	transform: translateY(6px); 
-	box-shadow: 0 0px 0 #5e0505; 
-}
-
-/*Botão Jogo 2 da Pokédex*/
-.botaojogo2 {
-	position: absolute;
-    top: 7%;
-    left: 16.5%;
-    width: 2%;
-    aspect-ratio: 1 / 1;
-    background: #fdc13f;
-    border-radius: 50%;
-	box-shadow: 0 2px 0 #7a5402;
-	transition: all 0.1s ease-in-out;
-	cursor: pointer;
-}
-
-.botaojogo2:active {
-	transform: translateY(6px); 
-	box-shadow: 0 0px 0 #7a5402; 
-}
-
-/*Botão Jogo 3 da Pokédex*/
-.botaojogo3 {
-	position: absolute;
-    top: 7%;
-    left: 19%;
-    width: 2%;
-    aspect-ratio: 1 / 1;
-    background: #02ae36;
-    border-radius: 50%;
-	box-shadow: 0 2px 0 #013611;
-	transition: all 0.1s ease-in-out;
-	cursor: pointer;
-}
-
-.botaojogo3:active {
-	transform: translateY(6px); 
-	box-shadow: 0 0px 0 #013611; 
-}
-
-/*Pokédex - Tela : Tela onde irá aparecer os pokémons.*/
-.telapkm {
-	position: absolute;
-    top: 26%;
-    left: 6.6%;
-    width: 33.9%;
-    height: 40%;
-    background: rgba(255, 255, 255, 255);
+#pesquisa {
+    position: relative;
+    width: 70%;
+    height: 60px;
+    margin-top: 10%;
+    border: none;
+    
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
-	box-shadow: 3px 3px 15px 
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+
+    display: flex;              
+    align-items: center;
+    justify-content: center;
+    padding-left: 2%;
 }
 
-.grama {
-	position: absolute;
-    top: 6%;
-    left: 6.2%;
-    width: 90%;
-    height: 90%;
-	position: relative;
-	overflow: hidden;
-}
-
-.grama:before {
-	content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('../images/pokedex/grass.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 10%;         
-    z-index: 0; 
-}
-
-/*Pokémon - Div onde fica a imagem do pokémon.*/
-.pokemon {
-    position: absolute;
-    width: 60%;
-	height: 60%;
-    top: 30%;
-    left: 20%;
-    opacity: 100;
-    transition: opacity 0.1s ease, transform 0.2s ease;
-	background-image: url(../images/pkm/001.png);
-	background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.pokemon.capturado {
-    transform: scale(0);
-    opacity: 0;
-}
-
-/*Pokédex - Entrada de dados : Tela onde irá receber digitação do usuário.*/
-.entradadado {
-	position: absolute;
-    top: 73%;
-    left: 6.6%;
-    width: 33.9%;
-    height: 15%;
-    background: rgba(255, 255, 255, 255);
-    border-radius: 5px;
-	box-shadow: 3px 3px 15px
+#pesquisa::placeholder{
+    font-family: "Flexo";
+    font-weight: 900;
+    color: rgb(133, 133, 133);
+    font-size: 0.8vw;
+    margin-left: 5%;
 }
 
 .envia {
@@ -222,176 +88,3 @@ body {
   	border-left: 1.5vmax solid #050505;  /* cor da seta */
   	cursor: pointer;
 }
-
-/*Pokédex - Icone : Tela onde irá aparecer a pokébola.*/
-.iconepoke {
-	position: absolute;
-    top: 63%;
-    left: 20.3%;
-    width: 6%;
-    height: 12%;
-    background: rgb(0, 0, 0);
-    border-radius: 100px;
-}
-
-/*Pokédex - pokébola : Pokébola.*/
-.poke {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	margin: 0 auto;
-	background-image: url('../images/icons/pokeball.png');
-	background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: center;
-	cursor: pointer;
-}
-
-@keyframes pular {
-    0% { transform: translateY(0); }
-    30% { transform: translateY(-12px); }
-    60% { transform: translateY(0); }
-    80% { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
-}
-
-.poke:hover {
-	animation: pular 0.5s ease-out;
-}
-
-.poke.atirar {
-	transition: transform 0.5s ease-out;
-}
-
-/*Pokédex - Estatisticas : Tela onde irá aparecer os dados das tentativas.*/
-.estatistica {
-    position: absolute;
-    top: 26%;
-    left: 51.3%;
-    width: 43%;
-    height: 61.8%;
-    background: rgba(255, 255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 3px 3px 15px;
-    display: flex;
-    flex-direction: column; /* Coloca legenda em cima e ícones abaixo */
-    align-items: flex-start; /* Alinha à esquerda */
-    padding: 10px;
-    gap: 10px; /* espaço entre legenda e ícones */
-}
-
-.legendacor {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* alinha os status à esquerda */
-    gap: 10px; /* espaço entre Corretos, Parcial e Incorreto */
-}
-
-.legendacor .item {
-    display: flex;
-    align-items: center;
-    gap: 0.6vw;
-}
-
-.correto, .parcial, .incorreto {
-    width: 1.5vw;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.correto { background: #02ae36; }
-.parcial { background: #fdc13f; }
-.incorreto { background: #e42839; }
-
-.legendacor span {
-    font-family: "Flexo";
-    font-weight: 900;
-    color: rgb(138, 138, 138);
-    font-size: 0.8vw;
-    white-space: nowrap;
-}
-
-/* Ícones dos campos Pokémon */
-/* Container horizontal dos ícones */
-.icones {
-    display: flex;
-    gap: 0.1rem; /* 1mm entre quadrados */
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    width: 100%;
-}
-
-/* Cada item: nome + quadrado */
-.icones .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex: 0 0 auto; /* não encolhe nem cresce desproporcional */
-}
-
-/* Nome do campo */
-.icones .item span {
-    margin-bottom: 0.2rem;
-    font-family: "Flexo"; /* mesma fonte da legenda */
-    font-weight: 900;      /* mesma espessura da legenda */
-    font-size: 0.8vw;      /* responsivo conforme largura da tela */
-    color: #333;
-}
-
-/* Quadrado do valor */
-.campo-status {
-    width: 8vw;           /* quadrado responsivo */
-    height: 8vw;
-    max-width: 80px;      /* limite máximo */
-    max-height: 80px;
-    min-width: 40px;      /* limite mínimo */
-    min-height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    font-family: "Flexo";  /* mesma fonte da legenda */
-    font-weight: 900;       /* mesma espessura da legenda */
-    font-size: 0.8vw;       /* responsivo igual à legenda */
-    color: #000;            /* texto preto */
-    text-align: center;
-    padding: 0.2rem;
-    word-break: break-word;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-/* Cores dos status */
-.campo-status.correto { background-color: #02ae36; }
-.campo-status.parcial { background-color: #fdc13f; }
-.campo-status.incorreto { background-color: #e42839; }
-
-.campo-status:hover { transform: scale(1.05); }
-
-.pokemon-input {
-    position: absolute;
-    top: calc(76%);                     /* 1 cm para baixo */
-    left: calc(6.6% + 33.9% - 320px - 4cm);  /* 4 cm para a esquerda */
-    width: 10cm;                              /* largura fixa de 10 cm */
-    height: 10%;                              /* altura proporcional à entradadado */
-    padding: 0 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-family: "Flexo";
-    font-weight: 900;
-    font-size: calc(0.5rem + 0.8vw);         /* texto proporcional */
-    color: #000;
-    outline: none;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: #fff;
-}
-
-.pokemon-input:focus {
-    border-color: #02ae36;
-    box-shadow: 0 0 5px rgba(2,174,54,0.5);
-}
-
-s
