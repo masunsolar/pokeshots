@@ -10,10 +10,21 @@
     <title>PokéShots - Game</title>
 </head>
 <body>
+
+    <div class="flash-capture" id="flash-capture"></div>
+    <div class="explosion-container" id="explosion-container"></div>
+    <div class="capture-overlay" id="capture-overlay">
+        <div class="pokemon-reveal" id="pokemon-reveal">
+            <img id="pk-reveal-img" src="" />
+        </div>
+        <div class="capture-msg" id="capture-msg"></div>
+        <div class="shockwave" id="shockwave"></div>
+    </div>
     <div id="menu"></div>
     <script src="script/menu.js" defer></script>
     <div class="background">
         <div class="pokedex">
+            <div class="pokemobile"></div>
             <div class="botaohome">
                 <a href="index.html" class="botaohomelink"></a>
             </div>
@@ -24,6 +35,11 @@
             <div class="botaojogo3">
             </div>
             <div class="telapkm">
+                <div class="mensagem">
+                    <span>Um pokémon selvagem apareceu...</span>
+                </div>
+                <div class="pokeic">
+                </div>
                 <div class="grama">
                     <div class="pokemon">
                     </div>
@@ -33,7 +49,6 @@
                 <div class="envia">
                 </div>
             </div>
-            |<input type="text" class="pokemon-input" placeholder="Digite o nome do Pokémon" autocomplete="off">
             <div class="iconepoke">
                 <div class="poke">
                 </div>
@@ -53,34 +68,67 @@
                         <span>Incorreto</span>
                     </div>
                 </div>
-                <div class="icones">
-                    <div class="item">
-                        <span>Tipo 1</span>
-                        <div class="campo-status" id="tipo1"></div>
+                <div class="infos">
+                    <div class="infoitem">
+                        <div class="pokm"></div>
+                        <span>Pokémon</span>
                     </div>
-                        <div class="item">
-                        <span>Tipo 2</span>
-                        <div class="campo-status" id="tipo2"></div>
+                    <div class="infoitem">
+                        <div class="ptipo"></div>
+                        <span>1° Tipo</span>
                     </div>
-                        <div class="item">
+                    <div class="infoitem">
+                        <div class="stipo"></div>
+                        <span>2° Tipo</span>
+                    </div>
+                    <div class="infoitem">
+                        <div class="habitat"></div>
                         <span>Habitat</span>
-                        <div class="campo-status" id="habitat"></div>
                     </div>
-                        <div class="item">
-                        <span>Cor</span>
-                    <div class="campo-status" id="cor"></div>
-                        </div>
-                    <div class="item">
-                        <span>Fase</span>
-                        <div class="campo-status" id="fase"></div>
+                    <div class="infoitem">
+                        <div class="cores"></div>
+                        <span>Cor(es)</span>
                     </div>
-                    <div class="item">
+                    <div class="infoitem">
+                        <div class="altura"></div>
                         <span>Altura</span>
-                        <div class="campo-status" id="altura"></div>
                     </div>
-                    <div class="item">
-                        <span>Peso</span>
-                        <div class="campo-status" id="peso"></div>
+                    <div class="infoitem">
+                        <div class="faseevolucao"></div>
+                        <span>Fase de Evolução</span>
+                    </div>
+                </div>
+                <div class="tentativas">
+                    <div class="tbox">
+                        <div class="titem">
+                            <div class="itpokm"></div>
+                            <span></span>
+                        </div>
+                        <div class="titem">
+                            <div class="itptipo"></div>
+                            <span></span>
+                        </div>
+                        <div class="titem">
+                            <div class="itstipo"></div>
+                            <span></span>
+                        </div>
+                        <div class="titem">
+                            <div class="ithabitat"></div>
+                            <span></span>
+                        </div>
+                        <div class="titem">
+                            <div class="itcores"></div>
+                            <span></span>
+                        </div>
+                        <div class="titem">
+                            <div class="italtura"></div>
+                            <span></span>
+                        </div>
+                        <div class="titem">
+                            <div class="itfaseevolucao"></div>
+                            <span></span>
+                        </div>
+
                     </div>
                 </div>
             </div>
